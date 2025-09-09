@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout2</title>
+    <style>
+      .container {
+        margin: 40px;
+        display: grid;
+        height: 90vh;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 2fr) 1fr;
+        grid-template-rows: 1fr 3.33fr 0.67fr;
+        grid-template-areas:
+        "header header sidebar"
+        "main1 main2 sidebar"
+        "footer footer footer"
+      }
+      .item {
+        display: grid;
+        place-items: center;
+        background-color: gold;
+        border: 0.5px solid black;
+        border-radius: 10px;
+        font-size: 25px;
+        font-weight: 400;
+      }
+      .header {grid-area: header;}
+      .main1 {grid-area: main1;}
+      .main2 {grid-area: main2;}
+      .sidebar {grid-area: sidebar;}
+      .footer {grid-area: footer;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item header">Header</div>
+      <div class="item main1">Main</div>
+      <div class="item main2">Main</div>
+      <div class="item sidebar">Sidebar</div>
+      <div class="item footer">Footer</div>
+    </div>
+  </body>
+</html>
